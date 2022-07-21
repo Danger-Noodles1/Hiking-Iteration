@@ -8,12 +8,12 @@ const userController = {};
 userController.register = async (req, res, next) => {
   try {
     console.log('registering user');
-    const { firstName, lastName, location, username, password } = req.body;
+    const { firstName, lastName, location, email, password } = req.body;
     const user = await User.create({
       firstName,
       lastName,
       location,
-      username,
+      email,
       password,
     });
     res.locals.user = user;

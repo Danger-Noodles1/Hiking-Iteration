@@ -39,7 +39,7 @@ postController.getSpecificPost = (req, res, next) => {
 postController.getAll = async (req, res, next) => {
   try {
     const posts = await Post.find({});
-    console.log(posts);
+    //console.log(posts);
     res.send(posts);
   } catch (err) {
     return next(err);
